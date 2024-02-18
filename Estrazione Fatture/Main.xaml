@@ -128,7 +128,7 @@
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="LTE">
             <ui:FilterOperationArgument.Column>
-              <InArgument x:TypeArguments="x:String">["Data consegna"]</InArgument>
+              <InArgument x:TypeArguments="x:String">["data consegna"]</InArgument>
             </ui:FilterOperationArgument.Column>
             <ui:FilterOperationArgument.Operand>
               <InArgument x:TypeArguments="s:DateTime">[DateTime.Today]</InArgument>
@@ -146,14 +146,7 @@
     <ui:FilterDataTable DataTable="[FattureEstratte]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="387.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[FattureFuture]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-          <ui:FilterOperationArgument BooleanOperator="And" Operator="GT">
-            <ui:FilterOperationArgument.Column>
-              <InArgument x:TypeArguments="x:String">["Data consegna"]</InArgument>
-            </ui:FilterOperationArgument.Column>
-            <ui:FilterOperationArgument.Operand>
-              <InArgument x:TypeArguments="s:DateTime">[DateTime.Today]</InArgument>
-            </ui:FilterOperationArgument.Operand>
-          </ui:FilterOperationArgument>
+          <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="GT" />
         </scg:List>
       </ui:FilterDataTable.Filters>
       <ui:FilterDataTable.SelectColumns>
@@ -164,6 +157,6 @@
     </ui:FilterDataTable>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[FattureFuture.RowCount]" />
     <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[FattureScadute]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="387.2,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Passate" WorkbookPath="C:\Users\SimoneCamilletti\Fatture\Output\Fatture_Filtrate.xlsx" />
-    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[FattureFuture]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="387.2,116" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Future" WorkbookPath="C:\Users\SimoneCamilletti\Fatture\Output\Fatture_Filtrate.xlsx" />
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[FattureFuture]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="387.2,116" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Future" WorkbookPath="C:\Users\SimoneCamilletti\Desktop\Fatture_Filtrate.xlsx" />
   </Sequence>
 </Activity>
